@@ -1,4 +1,4 @@
-// Ejercicio 35 - Historial de navegación
+// Ejercicio A-2 - Historial de navegación
 
 // Acceder a los botones en el DOM
 const btnBack = document.getElementById("btnBack");

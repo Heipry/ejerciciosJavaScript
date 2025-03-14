@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/ejercicios.css">
+    <link rel="shortcut icon" href="img/javascript.ico" type="image/x-icon">
+    <title>Ejercicio A-5 de JS - Reloj Digital</title>
+    <meta name="description" content="Ejercicio de práctica para crear un reloj digital en JavaScript.">
+    <link rel="favicon" href="./img/javascript.ico">
+    <link rel="apple-touch-icon" href="./img/javascript.ico">
+    <meta name="theme-color" content="#f1d863">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:type" content="website">
+    <meta property="og:title" name="twitter:title" content="Ejercicios de practica de JS">
+    <meta property="og:description" name="twitter:description" content="Ejercicio para crear un reloj digital con JavaScript">    
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-color">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" rel="noopener">
+            <img src="./img/javascript.png" alt="hoja con la abreviación de JavaScript" class="d-inline-block align-text-top" width="42" height="42">
+            <h1>Ejercicios de JavaScript</h1>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main id="main-ejercicio38">
+      <section>
+        <h2 class="text-center my-3">Ejercicios de práctica de <strong>JavaScript</strong></h2>
+      </section>
+      <section id="ejercicios">
+        <h3>Ejercicio F-7</h3>
+        <p>Crear un reloj digital que muestre la hora en tiempo real (horas, minutos y segundos) en un sitio específico de la página web. El reloj debe actualizarse cada segundo y mostrar la hora con formato de dos dígitos para horas, minutos y segundos.</p>
+        <ol>
+          <li>Crea una función llamada <code>actReloj()</code> que se encargue de obtener la hora actual utilizando el objeto <code>Date()</code>.</li>
+          <li>Dentro de la función <code>actReloj()</code>, usa los métodos <code>getHours()</code>, <code>getMinutes()</code>, y <code>getSeconds()</code> para obtener los valores de hora, minutos y segundos.</li>
+          <li>Convierte los valores de hora, minutos y segundos en cadenas de dos dígitos. Si el valor es menor que 10, agrega un cero a la izquierda para mantener el formato de dos dígitos (por ejemplo, 8 debe convertirse en "08").</li>
+          <li>Construye una cadena HTML que muestre la hora con formato adecuado. Puedes usar etiquetas HTML para darle formato al texto, como para cambiar el tipo de letra y tamaño (por ejemplo, usar la fuente Arial y tamaño de letra 30px).</li>
+          <li>Coloca la cadena generada dentro de un bloque <code>div</code> en la página utilizando la propiedad <code>innerHTML</code>.</li>
+          <li>Configura un temporizador (<code>setInterval</code>) para llamar a la función <code>actReloj()</code> cada segundo (1000 milisegundos).</li>
+          <li>En el HTML de la página, agrega un contenedor con el id <code>reloj</code>, donde se mostrará la hora.</li>
+          <li>Asegúrate de que el reloj se inicie automáticamente cuando la página se cargue, vinculando el evento <code>onload</code> de la página con la función <code>actReloj()</code>.</li>
+        </ol>
+        <p>Lo resolví del siguiente modo:</p>
+        <code class="code-block">
+        function actReloj(){<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;   let hhmmss = new Date();<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    let horas = hhmmss.getHours();<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    let minutos = hhmmss.getMinutes();<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    let segundos = hhmmss.getSeconds();<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    let lahora = "";<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    // Convertimos los números a dos dígitos, o sea, 6 -> 06<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    horas = (horas &lt;= 9) ? ("0" + horas) : horas;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    minutos = (minutos &lt;= 9) ? ("0" + minutos) : minutos;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    segundos = (segundos &lt;= 9) ? ("0" + segundos) : segundos;  <br>      
+        &nbsp;&nbsp;&nbsp;&nbsp;    // Aquí construimos la cadena de texto HTML con la hora<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    lahora = horas + ":" + minutos + ":" + segundos;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    let reloj = document.getElementById('reloj');<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    reloj.innerHTML = lahora;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    // ejecuta la función cada segundo (1000 milisegundos)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;    setTimeout("actReloj()", 1000);<br>
+        }<br>
+        window.onload = actReloj;<br>
+        
+       </code>
+
+        <p>🕒 El reloj se actualizará automáticamente cada segundo.</p>      
+
+
+        <div id="reloj" style="font-size: 30px; font-weight:bold;">
+        </div>
+
+        <a href="index.html" class="btn btn-bg-color mt-5" rel="noopener">Volver al inicio</a>
+      </section>
+    </main>
+    <footer class="footer mt-auto bg-color-footer">
+      <div class="container py-2">
+        <p>Diseñado por <a href="https://javierdiaz.com.es" target="_blank" rel="noopener">Javier Díaz</a></p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    <script src="./js/ejercicio39.js"></script>
+    <div id="reloj"></div>
+  </body>
+</html>
