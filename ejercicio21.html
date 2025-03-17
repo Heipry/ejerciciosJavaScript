@@ -48,14 +48,16 @@
           <li>Muestra por la consola los productos introducidos por el usuario.</li>
         </ol>
         <p>Forma de resolverlo:</p>
-        <code class="code-block"></code>
-        <code class="code-block"></code>
-        <code class="code-block"></code>
-        <code class="code-block"></code>
-        <code class="code-block"></code>
-        <code class="code-block"></code>
-        <code class="code-block"></code>
-        <code class="code-block"></code>
+        <p>Creo el array vac&iacute;o que se llame listaDeSuper.</p>
+        <code class="code-block">let listaDeSuper = []; </code>
+
+        <p>Con un prompt pido al usuario para que ingrese al menos 5 productos para llenar la lista de super.</p>
+        <code class="code-block">let listaUsuario = prompt(&#34;Por favor ingrese 5 productos para armar la lista del supermercado, separe cada producto con una coma.&#34;);</code>
+        <code class="code-block">listaDeSuper = listaUsuario.split(&#34;,&#34;);</code>
+
+       <p>muestro por consola los productos en el array</p>
+        <code class="code-block">console.log(listaDeSuper);
+        </code>
         <a href="index.html" class="btn btn-bg-color mt-5" rel="noopener">Volver al inicio</a> 
 
       </section>
