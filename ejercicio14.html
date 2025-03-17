@@ -46,16 +46,55 @@
       <h2 class="text-center my-3">Ejercicios de práctica de <strong>JavaScript</strong></h2>
     </section>
     <section id="ejercicios">
-      <h3>Ejercicio C-7</h3>
-      <p>Se va a mostrar por consola</p>
-      <ol>
-        <li>Imprimí todos los números entre -20 y 30</li>
-        <li>Imprimí todos los números pares entre 20 y 60</li>
-        <li>Imprimí todos los números impares entre 600 y 666</li>
-        <li>Imprimí todos los números primos entre 1 y 150</li>
-      </ol>
-      <p>Forma de resolverlo: </p>
-      <code class="code-block"></code>
+      <h3>Ejercicio C-7</h3>      
+      <p>A) Imprimir todos los números entre -20 y 30</p>
+<code class="code-block">
+let num = -20;<br>
+while(num <= 30) {<br>
+&emsp;console.log(`El número es: ${num}`);<br>
+&emsp;num ++;<br>
+}<br>
+</code>
+
+<p>B) Imprimir todos los números pares entre 20 y 60</p>
+<code class="code-block">
+let num2 = 20;<br>
+while(num2 <= 60) {<br>
+&emsp;console.log(`El número es: ${num2}`);<br>
+&emsp;num2 +=2;<br>
+}<br>
+</code>
+
+<p>C) Imprimir todos los números impares entre 600 y 666</p>
+<code class="code-block">
+let num3 = 600;<br>
+while (num3<=666) {<br>
+&emsp;if (num3 %2 == 1) {<br>
+&emsp;&emsp;console.log(`El número es: ${num3}`);<br>
+&emsp;}<br>
+&emsp;num3++;<br>
+}<br>
+</code>
+
+<p>D) Imprimir todos los números primos entre 1 y 150</p>
+<code class="code-block">
+let num4 = 2;<br>
+while (num4 <= 150) {<br>
+&emsp;let esPrimo = true;<br>
+&emsp;for (let i = 2; i < num4; i++) {<br>
+&emsp;&emsp;if (num4 % i == 0) {<br>
+&emsp;&emsp;&emsp;esPrimo = false;<br>
+&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;}<br>
+&emsp;}<br>
+&emsp;if (esPrimo) {<br>
+&emsp;&emsp;console.log(`El número primo es: ${num4}`);<br>
+&emsp;}<br>
+&emsp;num4++;<br>
+}<br>
+</code>
+
+
       <a href="index.html" class="btn btn-bg-color mt-5" rel="noopener">Volver al inicio</a>
     </section>
   </main>

@@ -41,14 +41,63 @@
       </section>
       <section id="ejercicios">
         <h3>Ejercicio C-6</h3>
-        <p>Se le pedirá al usuario 2 números para generar la suma, la resta, la división y la multiplicación entre ellos.</p>
-        <ol>
-          <li>Preguntar al usuario que operación quiere realizar antes de que ingrese los dos números a operar.</li>
-          <li>Si el usuario no ingresa ninguna respuesta, automáticamente informarle que deberá ingresar un dato.</li>
-        </ol>
+        <p>Se le pedirá al usuario 2 números para generar la suma, la resta, la división y la multiplicación entre
+                ellos.</p>
+              <ol>
+                <li>Preguntar al usuario que operación quiere realizar antes de que ingrese los dos números a operar.</li>
+                <li>Si el usuario no ingresa ninguna respuesta válida, informarle que no lo es.
+                </li>
+              </ol>
         <p>Forma de resolverlo: </p>
-        <code class="code-block"></code>
-        <a href="index.html" class="btn btn-bg-color mt-5" rel="noopener">Volver al inicio</a> 
+        <p>
+<code class="code-block">
+let num1 = 0;<br>
+let num2 = 0;<br>
+let resultado = 0;<br><br>
+
+&#47;&#47;Pido que elija la operaci&oacute;n<br>
+let operacion =<br>
+&#160;prompt(&#96;Ingrese la opci&oacute;n en n&uacute;mero de  la operaci&oacute;n que desea hacer:<br>
+1 - Suma<br>
+2 - Resta<br>
+3 - Multiplicaci&oacute;n<br>
+4 - Divisi&oacute;n&#96;);<br><br>
+
+&#47;&#47; Validamos si la operaci&oacute;n es v&aacute;lida<br>
+if (operacion === &#34;1&#34; || operacion === &#34;2&#34; || operacion === &#34;3&#34; || operacion === &#34;4&#34;) {<br>
+&emsp;&#47;&#47; Pedimos los n&uacute;meros para operar<br>
+&emsp;num1 = parseInt(prompt(&#34;Ingresa el primer n&uacute;mero:&#34;));<br>
+&emsp;num2 = parseInt(prompt(&#34;Ingresa el segundo n&uacute;mero:&#34;));<br><br>
+
+&#47;&#47; Validamos que los n&uacute;meros ingresados sean v&aacute;lidos<br>
+&emsp;if (isNaN(num1) || isNaN(num2)) {<br>
+&emsp;&emsp;alert(&#34;Por favor, ingresa n&uacute;meros v&aacute;lidos.&#34;);<br>
+&emsp;} else {<br>
+&emsp;&#47;&#47; Realizamos la operaci&oacute;n seg&uacute;n la opci&oacute;n seleccionada<br>
+&emsp;switch (operacion) {<br>
+&emsp;&emsp;case &#34;1&#34;:<br>
+&emsp;&emsp;&emsp;resultado = num1 + num2;<br>
+&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;case &#34;2&#34;:<br>
+&emsp;&emsp;&emsp;resultado = num1 - num2;<br>
+&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;case &#34;3&#34;:<br>
+&emsp;&emsp;&emsp;resultado = num1 * num2;<br>
+&emsp;&emsp;&emsp;break;<br>
+&emsp;&emsp;case &#34;4&#34;:<br>
+&emsp;&emsp;&emsp;resultado = num1 / num2;<br>
+&emsp;&emsp;&emsp;break;<br>
+&emsp;}<br>
+&#47;&#47; Mostramos el resultado<br>
+&emsp;alert(&#34;El resultado es: &#34; + resultado);<br>
+&emsp;}<br>
+} else {<br>
+&emsp;alert(&#34;Debes ingresar una operaci&oacute;n v&aacute;lida (suma, resta, multiplicaci&oacute;n, divisi&oacute;n).&#34;);<br>
+}<br>
+</code>
+
+<a href="index.html" class="btn btn-bg-color mt-5" rel="noopener">Volver al inicio</a>
+
       </section>
     </main>
   

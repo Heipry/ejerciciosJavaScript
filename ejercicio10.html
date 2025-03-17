@@ -43,17 +43,34 @@
         <h3>Ejercicio C-3</h3>
         <h4>Una entrada para tu película favorita.</h4>
         <ol>
-          <li>Declara una variable que se llame <strong>peliculaElegida</strong> y asignale el método <strong>prompt() </strong> para que le puedas solicitar al usuario que ingrese su película favorita de una lista, que tú vas a proporcionar en dicho método. <br>
-          Importante: para que puedas enlistar las opciones de películas una debajo de otra, necesitaras el carácter especial (\n ) ó colocar un <strong> br </strong> para hacer un salto de línea. Sino te queda muy claro  cómo usarlo, deberás googlea para ver un ejemplo.</li>
-          <li>Evalúa cada uno de los casos con el condicional switch (utilizaremos este método para practicarlo). En el bloque de código de cada case le diremos que “su ticket ha sido emitido”, pero, lo haremos a través del método <strong>document.write()</strong> y en su argumento(dentro de los paréntesis) haremos un template literals con el formato HTML del texto y la imagen de la película elegida.</li>
+         <li>Declara una variable que se llame <strong>peliculaElegida</strong> y asignale el método <strong>prompt() </strong> para que le puedas solicitar al usuario que ingrese su película favorita de una lista, que tú vas a proporcionar en dicho método. <br>
+          Importante: para que puedas enlistar las opciones de películas una debajo de otra, necesitaras el carácter especial (\n ), colocar un <strong> br </strong> para hacer un salto de línea o usar un texto preformateado. Si no te queda muy claro  cómo usarlo, deberás googlear para ver un ejemplo.</li>
+          <li>Evalúa cada uno de los casos con el condicional switch (utilizaremos este método para practicarlo). En el bloque de código de cada case le diremos que “su ticket ha sido emitido”, pero, lo haremos a través del método innerHTML escogiendo el id 'pelicula'.</li>
         </ol>
-        <code class="code-block"></code>
-        <code class="code-block"></code>
-        <code class="code-block"></code>
-        <code class="code-block">  </code>
-        <code class="code-block"> </code>
-        <code class="code-block"></code>
-        <a href="index.html" class="btn btn-bg-color mt-5" rel="noopener">Volver al inicio</a> 
+        <code class="code-block">
+        let peliculaElegida = prompt(&#96;Por favor elige cu&aacute;l de estas pel&iacute;culas es tu favorita: <br>
+        1- Coco<br>
+        2- Relatos salvajes<br>
+        3- Intocable<br>
+        4- El se&ntilde;or de los anillos&#96;);<br><br>
+        switch (peliculaElegida) {<br>
+        &emsp;case &#34;1&#34;:<br>
+        &emsp;&emsp;pelicula.innerHTML = &#39;&lt;p&gt;Su ticket ha sido emitido.&lt;/p&gt; &lt;img src=&#34;./img/coco.jpg&#34; alt&#34;pelicula coco&#34; &gt;&#39;<br>
+        &emsp;&emsp;break;<br>
+        &emsp;case &#34;2&#34;:<br>
+        &emsp;&emsp;pelicula.innerHTML = &#96;&#60;p&#62;Su ticket ha sido emitido.&#60;/p&#62; &#60;img src=&#34;./img/relatos-salvajes.jpg&#34; alt&#34;pelicula relatos salvajes&#34;&#62;&#96;<br>
+        &emsp;&emsp;break;<br>
+        &emsp;case &#34;3&#34;:<br>
+        &emsp;&emsp;pelicula.innerHTML = &#96;&#60;p&#62;Su ticket ha sido emitido.&#60;/p&#62; &#60;img src=&#34;./img/intocable.jpg&#34; alt&#34;pelicula Intocable&#34;&#62;&#96;<br>
+        &emsp;&emsp;break;<br>
+        &emsp;default:<br>
+        &emsp;&emsp;pelicula.innerHTML = &#96;&#60;p&#62;Su ticket ha sido emitido.&#60;/p&#62; &#60;img src=&#34;./img/anillos.jpg&#34; alt&#34;pelicula El señor de los anillos&#34;&#62;&#96;<br>
+        &emsp;&emsp;break;<br>
+        } <br>
+        </code>
+
+<a href="index.html" class="btn btn-bg-color mt-5" rel="noopener">Volver al inicio</a>
+
         <section id="pelicula">
 
         </section>

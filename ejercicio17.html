@@ -47,7 +47,7 @@
     </section>
     <section id="ejercicios">
       <h3>Ejercicio C-10</h3>
-      <p>Se le pedirá al usuario un número y una vez que lo tengamos se deberá mostrar en pantalla las tablas de dicho número hasta el 10:</p>
+      <p>Se le pedirá al usuario un número y una vez que lo tengamos se deberá mostrar en consola las tablas de dicho número hasta el 10:</p>
       <p>Por ejemplo, si el usuario escribe 5 se deberá generar lo siguiente:</p>
       <p>5 x 1 = 5</p>
       <p>5 x 2 = 10</p>
@@ -57,14 +57,9 @@
       <p>Forma de resolverlo: </p>
       <p>Pido que ingrese un numero y lo guardo en la variable numeroIngresado</p>
       <code class="code-block">let numeroIngresado = Number(prompt('Por favor ingrese un número, para mostrarle la tabla del número del 1 al 10: '));</code>
-      <p>declaro e inicializo en 0 la variable i que es el index para recorrer con el for los números del 1 al 10 para hacer la multiplicación</p>
-      <code class="code-block">var i = 0;</code>
       <p>Con un for voy recorriendo del 1 al 10 y dentro hago la multiplicación del númeroIngresado por los números de la tabla</p>
-      <code class="code-block">for (i=0; i<=10; i++)  {</code>
-      <code class="code-block">document.write("<ul>");</code>
-      <code class="code-block">document.write(` ${numeroIngresado} x  ${i} = ${numeroIngresado * i}`);</code>
-      <code class="code-block">document.write("</li>");</code>
-      <code class="code-block">  document.write("</ul>");</code>
+      <code class="code-block">for (i=1; i<=10; i++)  {</code>
+      <code class="code-block">&emsp;console.log(` ${numeroIngresado} x  ${i} = ${numeroIngresado * i}`);</code>
       <code class="code-block">  }</code>
       <a href="index.html" class="btn btn-bg-color mt-5" rel="noopener">Volver al inicio</a>
     </section>

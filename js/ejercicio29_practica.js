@@ -4,7 +4,7 @@ let titulo = document.querySelector('h1');
 console.info(titulo);
 //Uso la variable titulo que tiene mi etiqueta h1 del DOM y con textContent cambio a un nuevo string que diga “Estoy agregando un nuevo texto”. Lo que me va a cambiar el texto de mi etiqeuta h1 por : Estoy agregando un nuevo texto
 titulo.textContent = "Estoy agregando un nuevo texto"
-//Elegí el primer elemento p con el método .querySelector ya que me va a seleccionar el primero de los párrafos y lo guardo en la variable primer_parrafo. Y le agrego el siguiente código html en su interior con la etiqueta span : Estoy aprendiendo a manipular el DOM con .innerHTML
+//elige el primer elemento p con el método .querySelector ya que me va a seleccionar el primero de los párrafos y lo guardo en la variable primer_parrafo. Y le agrego el siguiente código html en su interior con la etiqueta span : Estoy aprendiendo a manipular el DOM con .innerHTML
 let primer_parrafo = document.querySelector('p')
 primer_parrafo.innerHTML = "<span>Estoy aprendiendo a manipular el DOM </span>"
 //Otra forma de poder manipular el primer párrafo, es obtenerlo por su id con: let primer_parrafo = document.getElementById('primerParrafo')

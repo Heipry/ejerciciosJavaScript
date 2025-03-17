@@ -402,16 +402,9 @@
               <h4>Una entrada para tu película favorita.</h4>
               <p>Números pares o impares</p>
               <ol>
-                <li>Declara una variable que se llame <strong>peliculaElegida</strong> y asignale el método
-                  <strong>prompt() </strong> para que le puedas solicitar al usuario que ingrese su película favorita de
-                  una lista, que tú vas a proporcionar en dicho método. <br>
-                  Importante: para que puedas enlistar las opciones de películas una debajo de otra, necesitaras el
-                  carácter especial (\n ) ó colocar un <strong> br </strong> para hacer un salto de línea. Sino te queda
-                  muy claro cómo usarlo, deberás googlear para ver un ejemplo.</li>
-                <li>Evalúa cada uno de los casos con el condicional switch (utilizaremos este método para practicarlo). En
-                  el bloque de código de cada case le diremos que “su ticket ha sido emitido”, pero, lo haremos a través
-                  del método <strong>document.write()</strong> y en su argumento(dentro de los paréntesis) haremos un
-                  template literals con el formato HTML del texto y la imagen de la película elegida.</li>
+                 <li>Declara una variable que se llame <strong>peliculaElegida</strong> y asignale el método <strong>prompt() </strong> para que le puedas solicitar al usuario que ingrese su película favorita de una lista, que tú vas a proporcionar en dicho método. <br>
+                  Importante: para que puedas enlistar las opciones de películas una debajo de otra, necesitaras el carácter especial (\n ), colocar un <strong> br </strong> para hacer un salto de línea o usar un texto preformateado. Si no te queda muy claro  cómo usarlo, deberás googlear para ver un ejemplo.</li>
+                  <li>Evalúa cada uno de los casos con el condicional switch (utilizaremos este método para practicarlo). En el bloque de código de cada case le diremos que “su ticket ha sido emitido”, pero, lo haremos a través del método innerHTML escogiendo el id 'pelicula'.</li>
               </ol>
               <a href="ejercicio10.html" rel="noopener">Ver el ejercicio</a>
             </div>
@@ -458,7 +451,7 @@
               <h4>El programa responsable.</h4>
               <p>Crea un algoritmo utilizando el operador ternario que le pregunte al usuario cuantos tragos ha bebido.</p>
               <ol>
-                <li>Si el número de trago es mayor a cero debe emitir una alerta que diga que no puede conducir.</li>
+                <li>Si el número de tragos es mayor a cero debe emitir una alerta que diga que no puede conducir.</li>
                 <li>Si el usuario indica que no ha tomado nada, entonces decirle que “Nos alegra que seas un conductor
                   responsable”.</li>
               </ol>
@@ -481,7 +474,7 @@
                 ellos.</p>
               <ol>
                 <li>Preguntar al usuario que operación quiere realizar antes de que ingrese los dos números a operar.</li>
-                <li>Si el usuario no ingresa ninguna respuesta, automáticamente informarle que deberá ingresar un dato.
+                <li>Si el usuario no ingresa ninguna respuesta válida, informarle que no lo es.
                 </li>
               </ol>
               <a href="ejercicio13.html" rel="noopener">Ver el ejercicio</a>
@@ -521,7 +514,7 @@
           <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <p>Dada la edad de una persona (entre 1 y 110 años) y su género ('F' para mujeres, 'M' para hombres),
+              <p>Dada la edad de una persona y su género ('F' para mujeres, 'M' para hombres),
                 indicar si está en edad para jubilarse.</p>
               <p>Observación: Supongamos que las mujeres se jubilan con 60 años o más. Los hombres se jubilan con 65 años o más. Ejemplo:
                 Si ingresa 60 y 'M', debe mostrar como resultado en pantalla “No se jubila”.</p>
@@ -560,7 +553,7 @@
           <div id="collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="headingSeventeen"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <p>Se le pedirá al usuario un número y una vez que lo tengamos se deberá mostrar en pantalla las tablas de
+              <p>Se le pedirá al usuario un número y una vez que lo tengamos se deberá mostrar en consola las tablas de
                 dicho número hasta el 10:</p>
               <p>Por ejemplo, si el usuario escribe 5 se deberá generar lo siguiente:</p>
               <p>5 x 1 = 5</p>
