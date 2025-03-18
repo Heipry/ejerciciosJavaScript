@@ -13,4 +13,8 @@ console.info(toDoList.dia);
 console.info(toDoList['tipo de tareas']);
 //Muestro por consola la cantidad de productos usando bracket notation con console.info
 console.info(toDoList['cantidad de productos']);
+// boton notificacion
+document.getElementById("botonNotificacion").addEventListener("click", () => {
+  toDoList.notificacion(); // Ejecutar la función notificación al hacer clic en el botón
+});
 

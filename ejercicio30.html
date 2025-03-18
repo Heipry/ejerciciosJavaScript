@@ -56,12 +56,50 @@
           </li>
         </ol>
         <h5 class="my-3">👇🏼 Acá está el botón creado </h5>
-        <button id="ejercicio30">Activar</button>
+        <button id="ejercicio30" class = "boton-rojo" >Activar</button>
         <h5 class="my-3">Cómo lo hice?</h5>
-        <p>En este archivo html creo el botón con el texto <strong>Activar</strong> y le aplico la <strong>clase "boton-ejercicio30</strong>, luego en mi archivo de CSS nombrado <strong>ejercicios.css</strong> nombro la clase <strong>boton-ejercicio30</strong> y le aplico la propiedad background-color con el valor "red".</p>
-        <code class="code-block"></code>
+        <p>En este archivo html creo el botón con el texto <strong>Activar</strong> y le aplico la <strong>clase "boton-rojo"</strong>, luego en mi archivo de CSS nombrado <strong>ejercicios.css</strong> nombro la clase <strong>boton-rojo</strong> y le aplico la propiedad background-color con el valor "red".</p>
+        <p>Como el botón creado tiene id="ejercicio30", creo la variable boton a la que voy a relacionar con el botón de mi HTML mediante .getElementById, así luego escribo menos código, en vez de poner document.getElementById("ejercicio30") solo escribo boton</p>
+<code class="code-block">
+let boton = document.getElementById("ejercicio30");<br>
+</code>
 
-        <p>👀 Hay que verlo desde la consola</p>
+<p>Y agrego el .addEventListener con el evento click que activará la función cambiarTexto que cambiará el texto del botón por “Desactivado”</p>
+<code class="code-block">
+boton.addEventListener('click', cambiarTexto);<br>
+</code>
+
+<p>Agrego el .addEventListener con el evento mouseenter que activará la función cambiarVerde, que cambiará el color a verde</p>
+<code class="code-block">
+boton.addEventListener("mouseenter", cambiarVerde);<br>
+</code>
+
+<p>Agrego el .addEventListener con el evento mouseleave que activará la función cambiarColor, volviendo al color que predeterminamos en CSS (rojo)</p>
+<code class="code-block">
+boton.addEventListener('mouseleave', volverColor);<br>
+</code>
+
+<p>Función cambiarTexto</p>
+<code class="code-block">
+function cambiarTexto() {<br>
+  boton.innerHTML = "Desactivado";<br>
+}<br>
+</code>
+
+<p>Función cambiarVerde</p>
+<code class="code-block">
+function cambiarVerde() {<br>
+  boton.style.backgroundColor = "green";<br>
+}<br>
+</code>
+
+<p>Función cambiarColor</p>
+<code class="code-block">
+function volverColor() {<br>
+  boton.style.backgroundColor = "red";<br>
+}<br>
+</code>
+
  
 
         <a href="index.html" class="btn btn-bg-color mt-5" rel="noopener">Volver al inicio</a> 

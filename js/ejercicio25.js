@@ -1,7 +1,7 @@
-//Creo la funcion expresada facturacion() que recibe como parametros: precio (valido que ingrese numero, que no ingrese vacio, que no sea 0, que no sea nÃºmero negaativo) y medioPago. Si el precio estÃ¡ (0,200) no importa el Ã©todo de pago, no hay ningÃºn descuento (es la condicion 1ra a evaluar en el if). Si el precio estÃ¡ en (200,400) el metodo de pago si influye, en el else if lo selecciono con switch. Y finalmente si el monto es mayor a 400 tampoco importa el metodo de pago, siempre tiene un 40 % de descuento. Siempre muestro todo por consola.
+//Creo la funcion expresada facturacion() que recibe como parametros: precio (valido que ingrese numero, que no ingrese vacio, que no sea 0, que no sea número negaativo) y medioPago. Si el precio estÃ¡ (0,200) no importa el método de pago, no hay ningún descuento (es la condicion 1ra a evaluar en el if). Si el precio estÃ¡ en (200,400) el metodo de pago si influye, en el else if lo selecciono con switch. Y finalmente si el monto es mayor a 400 tampoco importa el metodo de pago, siempre tiene un 40 % de descuento. Siempre muestro todo por consola.
 const facturacion = (precio = undefined, medioPago = undefined) => {
 
-  if(precio === undefined) return console.warn("No ingresaste un nÃºmero");
+  if(precio === undefined) return console.warn("No ingresaste un número");
 
   if(typeof precio !== "number") return console.error(`El ${precio} ingresado no es un numero.`);
 
@@ -15,20 +15,20 @@ const facturacion = (precio = undefined, medioPago = undefined) => {
   } else if(precio <400){
       switch (medioPago) {
         case "C":
-          console.info(`El precio ingresado es de ${precio}, por pago en tarjeta de crÃ©dito tenÃ©s un 10 % de descuento, tu precio final es de ${precio *0.9}.`);
+          console.info(`El precio ingresado es de ${precio}, por pago en tarjeta de crédito tenés un 10 % de descuento, tu precio final es de ${precio *0.9}.`);
           break;
         case "E":
-          console.info(`El precio ingresado es de ${precio}, por pago en efectivo tenÃ©s un 30 % de descuento, tu precio final es de ${precio *0.7}.`);
+          console.info(`El precio ingresado es de ${precio}, por pago en efectivo tienes un 30 % de descuento, tu precio final es de ${precio *0.7}.`);
           break;
         case "D":
-          console.info(`El precio ingresado es de ${precio}, por pago en tarjeta de dÃ©bito tenÃ©s un 20 % de descuento, tu precio final es de ${precio *0.8}.`);
+          console.info(`El precio ingresado es de ${precio}, por pago en tarjeta de débito tienes un 20 % de descuento, tu precio final es de ${precio *0.8}.`);
           break;   
        default:
         console.warn("No ingresaste el medio de pago");
         break;
      }
    } else {
-    return console.info(`El precio ingresado es de ${precio}, por monto mayor a $400 tenÃ©s un 40% de descuento, tu precio final es de ${precio * 0.6}.`);
+    return console.info(`El precio ingresado es de ${precio}, por monto mayor a $400 tienes un 40% de descuento, tu precio final es de ${precio * 0.6}.`);
   }
 }
 

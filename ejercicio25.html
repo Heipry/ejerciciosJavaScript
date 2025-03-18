@@ -44,13 +44,13 @@
         <p> Sistema de facturación.</p>
             <ol>
               <li>Crear una función que se llame facturacion().</li>
-              <li>La función tiene que recibir como parámetro el monto de un producto, y el medio de pago: C (tarjeta de crédito), E (efectivo) y D (tarjeta de débito). Si el monto del producto es menor a $200 no se aplicará ningún descuento. Si el monto a abonar es entre $200 y $400 se aplicará un descuento del 30% si el medio de pago es efectivo, 20% si se realiza con dÃ©bito y 10% con tarjeta de crédito. Para montos mayores a $400, el descuento es 40% sin importar el medio de pago.</li>
+              <li>La función tiene que recibir como parámetro el monto de un producto, y el medio de pago: C (tarjeta de crédito), E (efectivo) y D (tarjeta de débito). Si el monto del producto es menor a $200 no se aplicará ningún descuento. Si el monto a abonar es entre $200 y $400 se aplicará un descuento del 30% si el medio de pago es efectivo, 20% si se realiza con débito y 10% con tarjeta de crédito. Para montos mayores a $400, el descuento es 40% sin importar el medio de pago.</li>
               <li>La función deberá retornar el monto final a abonar.</li>
             </ol>
         <p>Forma de resolverlo:</p>
-        <p>Creo la funcion expresada <strong>facturacion()</strong> que recibe como parámetros: <strong>precio </strong> (valido que ingrese numero, que no ingrese vací­o, que no sea 0, que no sea nÃºmero negaativo) y <strong>medioPago</strong> .</p>
+        <p>Creo la funcion expresada <strong>facturacion()</strong> (usando arrow) que recibe como parámetros: <strong>precio </strong> (valido que ingrese numero, que no ingrese vací­o, que no sea 0, que no sea número negativo) y <strong>medioPago</strong> .</p>
         <p> Si el precio está (0,200) no importa el método de pago, no hay ningún descuento (es la condición 1ra a evaluar en el if). </p>
-        <p> Si el precio está en (200,400) el mÃ©todo de pago si influye, en el else if lo selecciono con switch. Y finalmente si el monto es mayor a 400 tampoco importa el mÃ©todo de pago, siempre tiene un 40 % de descuento. Siempre muestro todo por consola</p>
+        <p> Si el precio está en (200,400) el método de pago si influye, en el else if lo selecciono con switch. Y finalmente si el monto es mayor a 400 tampoco importa el método de pago, siempre tiene un 40 % de descuento. Siempre muestro todo por consola</p>
         <code class="code-block">const facturacion = (precio = undefined, medioPago = undefined) => {</code>
         <code class="code-block mx-3">  if(precio === undefined) return console.warn("No ingresaste un numero");</code>
         <code class="code-block mx-3"> if(typeof precio !== "number") return console.error(`El ${precio} ingresado no es un numero.`);</code>
@@ -73,7 +73,7 @@
         <code class="code-block mx-5">  console.warn("No ingresaste el medio de pago");</code>
         <code class="code-block mx-3"> break;</code>
         <code class="code-block mx-3">} else {</code>
-        <code class="code-block mx-5">return console.info(`El precio ingresado es de ${precio}, por monto mayor a $400 tenÃ©s un 40% de descuento, tu precio final es de ${precio * 0.6}.`);</code>
+        <code class="code-block mx-5">return console.info(`El precio ingresado es de ${precio}, por monto mayor a $400 tienes un 40% de descuento, tu precio final es de ${precio * 0.6}.`);</code>
         <code class="code-block mx3-">}</code>
         <code class="code-block">}</code>
         <p>Llamo a la función sin parámetros para ver validación</p>
@@ -96,7 +96,7 @@
         <code class="code-block">facturacion(500,"C");</code>
         <code class="code-block">facturacion(600,"E");</code>
         <code class="code-block">facturacion(700,"D");</code>
-        <p>Con F12 podés verlo en la consola</p>
+        <p>Con F12 puedes verlo en la consola</p>
         <a href="index.html" class="btn btn-bg-color mt-5" rel="noopener">Volver al inicio</a> 
 
       </section>

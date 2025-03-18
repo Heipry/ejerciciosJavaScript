@@ -74,7 +74,14 @@
         <code class="code-block">console.info(toDoList['tipo de tareas']);</code>
         <p>Muestro por consola la cantidad de productos usando bracket notation con console.info</p>
         <code class="code-block">console.info(toDoList['cantidad de productos']);</code>
-        <p>👀 Hay que verlo desde la consola</p>
+        <p>👀 Hasta quí hay que verlo desde la consola</p><br>
+        <p>Ejecuto el método notificacion</p>        
+        <code class="code-block">
+          document.getElementById("botonNotificacion").addEventListener("click", () => { <br>
+          toDoList.notificacion(); // Ejecutar la función notificación al hacer clic en el botón<br>
+          });</code>
+        <button id="botonNotificacion">Ejecutar Notificación</button><br>
+        
         <a href="index.html" class="btn btn-bg-color mt-5" rel="noopener">Volver al inicio</a> 
       </section>
     </main>

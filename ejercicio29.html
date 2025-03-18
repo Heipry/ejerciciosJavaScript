@@ -42,31 +42,41 @@
       <section id="ejercicios">
         <h3>Ejercicio F-3</h3>
         <p>Mis primeros pasos en <strong>Manipulación del DOM</strong>.</p>
-        <h4>Ejercicio 1:</h4>
         <ol>
-          <li>1. Abre <a href="https://practica-manipulacion-del-dom.netlify.app/ " target="_blank" rel="noopener noreferrer">https://practica-manipulacion-del-dom.netlify.app/ </a> para practicar
+          <li>Abre <a href="https://practica-manipulacion-del-dom.netlify.app/ " target="_blank" rel="noopener noreferrer">https://practica-manipulacion-del-dom.netlify.app/ </a> para practicar
           <li>Mira el textContent del <strong> h1 </strong> en la consola.</li>
           <li>Dale al textContent del <strong> h1</strong> un nuevo string que diga “Estoy agregando un nuevo texto”.</li>
-          <li>elige el primer elemento <strong>p</strong> y agrégale el siguiente código html en su interior con <strong>la etiqueta span</strong> : Estoy aprendiendo a manipular el DOM </li>
+          <li>Elige el primer elemento <strong>p</strong> y agrégale el siguiente código html en su interior con <strong>la etiqueta span</strong> : Estoy aprendiendo a manipular el DOM </li>
           <li>Mira por la consola el innerHTML del segundo <strong> ul</strong>
         </ol>
         
-        <h4 class="mt-4">Ejercicio 2:</h4>
-        <p>Manipulando el estilo de página</p>
-        <ol>
-          <li>Usando la propiedad style del elemento en javascript dale a ese
-            <strong> h1</strong> color de fondo amarillo.</li>
-          <li>Crea un selector <strong>.subtitulos</strong> en tu archivo <strong>style.css</strong> y dale las propiedad CSS:<br> color: teal; <br> font-size: 2rem; <br>font-family: Arial, Helvetica, sans-serif; <br> Luego agrégale a los <strong>h2</strong> la clase <strong>.subtitulos</strong> con la propiedad JS <strong>classList</strong>.</li>
-          <li>Obtén los elementos con la clase <strong>.estilo-letras</strong> y remueve la misma  con la propiedad JS <strong>classList</strong> que corresponda.</li>
-        </ol>
-
-        <button class="btn btn-bg-color mb-3"> <a href="ejercicio29_practica.html" target="_blank" rel="noopener noreferrer">Aca vemos la web y los dos ejercicios realizados</a></button>
+        
+         <p> Para mirar el textContent del h1 en la consola primero lo guardo en la variable titulo accediendo desde el document con el método .querySelector(), porque se que el h1 es único en la página y el .querySelector de devuelve el primer elemento (al ser h1 el único me devuelve el h1). Y luego lo muestro por consola con console.info pasándole como parámetro la variable titulo</p>
+        <code class="code-block">
+        let titulo = document.querySelector('h1');<br>
+        console.info(titulo);
+        </code>
+        <p>La variable titulo tiene mi etiqueta h1 del DOM y con textContent cambio a un nuevo string que diga “Estoy agregando un nuevo texto”. Lo que me va a cambiar el texto de mi etiqueta h1 por : Estoy agregando un nuevo texto</p>
+        <code class="code-block">
+        titulo.textContent = "Estoy agregando un nuevo texto"
+        </code>
+        <p>Elijo el primer elemento p con el método .querySelector ya que me va a seleccionar el primero de los párrafos y lo guardo en la variable primer_parrafo. Y le agrego el siguiente código html en su interior con la etiqueta span : Estoy aprendiendo a manipular el DOM mediante <strong>.innerHTML</strong> </p>
+        <code class="code-block">
+          let primer_parrafo = document.querySelector('p')<br>
+          primer_parrafo.innerHTML = "&lt;span&gt;Estoy aprendiendo a manipular el DOM&lt;/span&gt;"
+        </code>
+        <p>Otra  forma de poder manipular el primer párrafo, es obtenerlo por su id con: </p>
+        <code class="code-block">
+        let primer_parrafo = document.getElementById('primerParrafo')
+      </code>
+      <p>Para mirar por la consola el innerHTML del segundo ul, selecciono todos los elementos &lt;/ul&gt; y accedo al segundo con la notación de corchetes [1]</p>
+      <code class="code-block">        
+        let segundoUl = document.querySelectorAll('ul')[1];<br>
+        console.info(segundoUl.innerHTML);
+      </code>
 
         <code class="code-block"></code>
-        <code class="code-block"></code>
-       
-        <p>👀 Hay que verlo desde la consola</p>
- 
+
 
         <a href="index.html" class="btn btn-bg-color mt-5" rel="noopener">Volver al inicio</a> 
 
